@@ -1,0 +1,713 @@
+<!doctype html>
+<html>
+   <head><title>Lenny Face Tycoon 0.2.0</title><head>
+   <body>
+   	  <header>
+   	  	 <div class="headerDiv">
+   	  	     <span class="headerSpan">
+   	  	 	     <img class="moneyImg" width="40" src="coin.png">
+   	  	 	     <a id="moneyNumber" class="moneyNumber">0</a>
+   	  	 	     <span class="workButtonSpan">
+   	  	     		 <button onclick="work()" class="workButton">Work!</button>
+   	  			 </span>
+   	  	 	     <a class="workersText">Workers - </a>
+   	  	 	     <a id="workersNumber" class="workersNumber">0</a>
+   	  	 	     <a class="superWorkersText">Super Workers - </a><a id="superWorkersNumber" class="superWorkersNumber">0</a>
+   	  	 	     <a class="megaWorkersText">Mega Workers - </a>
+   	  	 	     <a id="megaWorkersNumber" class="megaWorkersNumber">0</a>	
+   	  	 	     <a class="superMegaWorkersText">Super Mega Workers - </a>
+   	  	 	     <a id="superMegaWorkersNumber" class="superMegaWorkersNumber">0</a>
+   	  	     </span>
+   	  	 </div>   
+   	  </header>
+   	  <main class="main">
+   	  	 <h1 class="workerShopHeading">Worker Shop</h1>
+   	  	 <span class="workerSpan">
+   	  	 	<a class="workerPriceText">Worker - </a>
+   	  	 	<a id="workerPriceNumber" class="workerPriceNumber">100</a>
+   	  	 	<img width="25" src="coin.png">
+   	  	 	<a class="spacingDotsOfWorkers">................................................</a>
+   	  	 	<span class="workerBuyButtonSpan">
+   	  	 		<button onclick="buyWorker()" class="buyWorkerButton">Buy</button>
+   	  	 	</span>
+   	  	 </span>
+   	  	 <br>
+   	  	 <span class="superWorkerSpan">
+   	  	 	 <a class="superWorkerPriceText">Super Worker - </a>
+   	  	 	 <a id="superWorkerPriceNumber" class="superWorkerPriceNumber">1,000</a>
+   	  	 	 <img width="25" src="coin.png">
+   	  	 	 <a class="spacingDotsOfWorkers">................................</a>
+   	  	 	 <span class="superWorkerBuyButtonSpan">
+   	  	 		 <button onclick="buySuperWorker()" class="buySuperWorkerButton">Buy</button>
+   	  	 	 </span>
+   	  	 </span>
+   	  	 <br>
+   	  	 <span class="megaWorkerSpan">
+   	  	 	 <a class="megaWorkerPriceText">Mega Worker - </a>
+   	  	 	 <a id="megaWorkerPriceNumber" class="megaWorkerPriceNumber">10,000</a>
+   	  	 	 <img width="25" src="coin.png">
+   	  	 	 <a class="spacingDotsOfWorkers">...............................</a>
+   	  	 	 <span class="megaWorkerBuyButtonSpan">
+   	  	 		 <button onclick="buyMegaWorker()" class="buyMegaWorkerButton">Buy</button>
+   	  	 	 </span>
+   	  	 </span>
+   	  	 <br>
+   	  	 <span class="superMegaWorkerSpan">
+   	  	 	 <a class="superMegaWorkerPriceText">Super Mega Worker - </a>
+   	  	 	 <a id="superMegaWorkerPriceNumber" class="superMegaWorkerPriceNumber">100,000</a>
+   	  	 	 <img width="25" src="coin.png">
+   	  	 	 <a class="spacingDotsOfWorkers">................</a>
+   	  	 	 <span class="superMegaWorkerBuyButtonSpan">
+   	  	 		 <button onclick="buySuperMegaWorker()" class="buySuperMegaWorkerButton">Buy</button>
+   	  	 	 </span>
+   	  	 </span>
+   	  	 <h1 class="lennyFaceShop">Lenny Face Shop</h1>
+   	  	 <span class="shopSpan">
+   	  	 	 <a>Lenny's Left Side Of Head: </a>
+   	  	 	 <a id="leftHeadPrice">1,000</a>
+   	  	 	 <img class="shopCoinImg" width="15" src="coin.png">
+   	  	 	 <a>.............................</a>
+   	  	 	 <button onclick="leftHead()" class="shopBuyButton">Buy</button>
+   	  	 	 <br>
+   	  	 	 <a>Lenny's Left Eyebrow: </a>
+   	  	 	 <a id="leftEyebrowPrice">5,000</a>
+   	  	 	 <img class="shopCoinImg" width="15" src="coin.png">
+   	  	 	 <a>......................................</a>
+   	  	 	 <button onclick="leftEyebrow()" class="shopBuyButton">Buy</button>
+   	  	 	 <br>
+   	  	 	 <a>Lenny's Left Eye: </a>
+   	  	 	 <a id="leftEyePrice">10,000</a>
+   	  	 	 <img class="shopCoinImg" width="15" src="coin.png">
+   	  	 	 <a>.............................................</a>
+   	  	 	 <button onclick="leftEyeFunction()" class="shopBuyButton">Buy</button>
+   	  	 	 <br>
+   	  	 	 <a>Lenny's Mouth: </a>
+   	  	 	 <a id="mouthPrice">50,000</a>
+   	  	 	 <img class="shopCoinImg" width="15" src="coin.png">
+   	  	 	 <a>.................................................</a>
+   	  	 	 <button onclick="mouthFunction()" class="shopBuyButton">Buy</button>
+   	  	 	 <br>
+   	  	 	 <a>Lenny's Nose: </a>
+   	  	 	 <a id="nosePrice">100,000</a>
+   	  	 	 <img class="shopCoinImg" width="15" src="coin.png">
+   	  	 	 <a>..................................................</a>
+   	  	 	 <button onclick="noseFunction()" class="shopBuyButton">Buy</button>
+   	  	 	 <br>
+   	  	 	 <a>Lenny's Right Eyebrow: </a>
+   	  	 	 <a id="rightEyebrowPrice">250,000</a>
+   	  	 	 <img class="shopCoinImg" width="15" src="coin.png">
+   	  	 	 <a>................................</a>
+   	  	 	 <button onclick="rightEyeBrowFunction()" class="shopBuyButton">Buy</button>
+   	  	 	 <br>
+   	  	 	 <a>Lenny's Right Eye: </a>
+   	  	 	 <a id="rightEyePrice">500,000</a>
+   	  	 	 <img class="shopCoinImg" width="15" src="coin.png">
+   	  	 	 <a>.........................................</a>
+   	  	 	 <button onclick="rightEyeFunction()" class="shopBuyButton">Buy</button>
+   	  	 	 <br>
+   	  	 	 <a>Lenny's Right Side Of Head: </a>
+   	  	 	 <a id="rightHeadPrice">1,000,000</a>
+   	  	 	 <img class="shopCoinImg" width="15" src="coin.png">
+   	  	 	 <a>...................</a>
+   	  	 	 <button onclick="rightSideOfHeadFunction()" class="shopBuyButton">Buy</button>
+   	  	 	 <h1>
+   	  	 </span>
+   	  </main>
+   	  <footer class="footer">
+   	  	 <a class="lennyFaceText">Lenny Face:</a>
+   	  	  <a id="lennyFace" class="lennyFace"></a>
+   	  </footer>
+   </body>
+</html>
+
+
+<style type="text/css">
+	
+	.headerDiv {
+		background-color: grey;
+		padding: 10px;
+	}
+
+	.headerSpan {
+		padding-left: 40px;
+	}
+
+	.moneyNumber {
+		font-size: 40px;
+		font-family: Comic Sans MS;
+		padding-left: 5px;
+	}
+
+	.workersText {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+		padding-left: 30px;
+	}
+
+	.workersNumber {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+	}
+
+	.superWorkersText {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+		padding-left: 30px;
+	}
+
+	.superWorkersNumber {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+	}
+
+	.megaWorkersText {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+		padding-left: 30px;
+	}
+
+	.megaWorkersNumber {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+	}
+
+	.superMegaWorkersText {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+		padding-left: 30px;
+	}
+
+	.superMegaWorkersNumber {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+	}
+
+	.workButton {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+		padding: 5px;
+	}
+
+	.workButtonSpan {
+		padding-left: 40px;
+	}
+
+	.workerShopHeading {
+		font-family: Comic Sans MS;
+	}
+
+	.spacingDotsOfWorkers {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+	}
+
+	.workerPriceText {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+	}
+
+	.workerPriceNumber {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+		padding-right: 5px;
+	}
+
+	.buyWorkerButton {
+		font-size: 20px;
+		font-family: Comic Sans MS
+	}
+
+	.workerBuyButtonSpan {
+		padding-left: 5px;
+	}
+
+	.superWorkerPriceText {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+	}
+
+	.superWorkerPriceNumber {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+		padding-right: 5px;
+	}
+
+	.buySuperWorkerButton {
+		font-size: 20px;
+		font-family: Comic Sans MS
+	}
+
+	.superWorkerBuyButtonSpan {
+		padding-left: 5px;
+	}
+
+	.megaWorkerPriceText {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+	}
+
+	.megaWorkerPriceNumber {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+		padding-right: 5px;
+	}
+
+	.buyMegaWorkerButton {
+		font-size: 20px;
+		font-family: Comic Sans MS
+	}
+
+	.megaWorkerBuyButtonSpan {
+		padding-left: 5px;
+	}
+
+	.superMegaWorkerPriceText {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+	}
+
+	.superMegaWorkerPriceNumber {
+		font-size: 30px;
+		font-family: Comic Sans MS;
+		padding-right: 5px;
+	}
+
+	.buySuperMegaWorkerButton {
+		font-size: 20px;
+		font-family: Comic Sans MS
+	}
+
+	.superMegaWorkerBuyButtonSpan {
+		padding-left: 5px;
+	}		
+
+	.lennyFaceShop {
+		font-family: Comic Sans MS
+	}
+
+	.shopSpan {
+		font-size: 20px;
+		font-family: Comic Sans MS;
+	}
+
+	.shopCoinImg {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.shopBuyButton {
+		margin-left: 5px;
+	}
+
+	.lennyFaceText {
+		font-size: 35px;
+		font-family: Comic Sans MS;
+		padding-left: 20px;
+	}
+
+	.lennyFace {
+		font-size: 70px;
+		font-family: Calibri;
+		padding-left: 350px;
+	}
+
+	.footer {
+		background-color: grey;
+		padding: 10px;
+	}
+
+</style>
+
+
+<script type="text/javascript">
+
+	//money vars
+
+	var money = 0
+
+
+	//work vars
+
+	var workProfits = 1;
+
+
+	//worker vars
+
+	var numberOfWorkers = 0;
+	var workerProfits = 10;
+	var workerPrice = 100;
+
+
+	//super worker vars
+
+	var numberOfSuperWorkers = 0;
+	var superWorkerProfits = 100;
+	var superWorkerPrice = 1000;
+
+
+	//mega worker vars
+
+	var numberOfMegaWorkers = 0;
+	var megaWorkerProfits = 1000
+	var megaWorkerPrice = 10000
+
+
+	//super mega worker vars
+
+	var numberOfSuperMegaWorkers = 0
+	var superMegaWorkerProfits = 10000
+	var superMegaWorkerPrice = 100000
+
+
+	//lenny face part vars
+
+	var leftSideOfHead = false;
+	var leftEyeBrow = false;
+	var leftEye = false;
+	var mouth = false;
+	var nose = false;
+	var rightEyeBrow = false;
+	var rightEye = false;
+	var rightSideOfHead = false;
+
+
+	//work function
+
+	function work() {
+  
+	  money = money + workProfits
+  
+	  document.getElementById("moneyNumber")
+	  .innerHTML = money;
+  
+	}
+
+	//worker function
+
+	function worker() {
+  
+	  money = money + workerProfits * numberOfWorkers
+  
+	  document.getElementById("moneyNumber")
+	  .innerHTML = money;
+  
+	}
+
+
+	//worker buy function
+
+	function buyWorker() {
+  
+	  if (money < workerPrice) {
+	    alert("You don't have enough money")
+	  } else {
+	    money = money - workerPrice;
+	    numberOfWorkers = numberOfWorkers + 1;
+	    
+	    document.getElementById("workersNumber")
+	    .innerHTML = numberOfWorkers;
+	    
+	    workerPrice = workerPrice * 2;
+	    
+	    document.getElementById("workerPriceNumber")
+	    .innerHTML = workerPrice
+	  }
+  
+	}
+
+	//super worker function
+
+	function superWorker() {
+	  
+	  money = money + superWorkerProfits * numberOfSuperWorkers
+	}
+
+
+	//super worker buy function
+
+	function buySuperWorker() {
+  
+	  if (money < superWorkerPrice) {
+	    alert("You don't have enough money!")
+	  } else {
+	  money = money - superWorkerPrice;
+	  numberOfSuperWorkers = numberOfSuperWorkers + 1;
+		  
+	  document.getElementById("superWorkersNumber")
+	  .innerHTML = numberOfSuperWorkers;
+
+	  superWorkerPrice = superWorkerPrice * 2;
+  
+	  document.getElementById("superWorkerPriceNumber")
+	  .innerHTML = superWorkerPrice
+
+	  }
+	}
+
+
+	//mega worker function
+
+	function megaWorker() {
+	  
+	  money = money + megaWorkerProfits * numberOfMegaWorkers
+	}
+
+
+	//mega worker buy function
+
+	function buyMegaWorker() {
+  
+	  if (money < megaWorkerPrice) {
+	    alert("You don't have enough money!")
+	  } else {
+	  money = money - megaWorkerPrice;
+	  numberOfMegaWorkers = numberOfMegaWorkers + 1;
+		  
+	  document.getElementById("megaWorkersNumber")
+	  .innerHTML = numberOfMegaWorkers;
+
+	  megaWorkerPrice = megaWorkerPrice * 2;
+  
+	  document.getElementById("megaWorkerPriceNumber")
+	  .innerHTML = megaWorkerPrice
+
+	  }
+	}
+
+
+	//super mega worker function
+
+	function superMegaWorker() {
+	  
+	  money = money + superMegaWorkerProfits * numberOfSuperMegaWorkers
+	}
+
+
+	//super mega worker buy function
+
+	function buySuperMegaWorker() {
+  
+	  	if (money < superMegaWorkerPrice) {
+	    alert("You don't have enough money!")
+	  	} else {
+	 	 money = money - superMegaWorkerPrice;
+	 	 numberOfSuperMegaWorkers = numberOfSuperMegaWorkers + 1;
+		  
+	 	 document.getElementById("superMegaWorkersNumber")
+	  	.innerHTML = numberOfSuperMegaWorkers;
+
+	 	 superMegaWorkerPrice = superMegaWorkerPrice * 2;
+  
+	  	document.getElementById("superMegaWorkerPriceNumber")
+	  	.innerHTML = superMegaWorkerPrice
+
+	  }
+	}
+
+
+	//left side of head function
+
+	function leftHead() {
+  
+	  if (leftSideOfHead == true) {
+	    alert("You Allready Bought Lenny's Left Side Of Head");
+	  
+	   } else if (money < 1000) {
+ 	   alert("You Don't Have Enough Money");
+ 
+ 	  } else {
+ 	   leftSideOfHead = true;
+ 	
+ 	   money = money - 1000;
+    
+ 	   document.getElementById("leftHeadPrice")
+ 	   .innerHTML = "Bought"
+  
+    
+ 	   document.getElementById("lennyFace")
+ 	   .innerHTML = "("
+ 	 }
+	}
+
+	//left eye brow function
+
+	function leftEyebrow() {
+  
+	  if (leftEyeBrow == true) {
+	    alert("You Allready Bought Lenny's Left Eyebrow");
+	  
+	   } else if (money < 5000) {
+	    alert("You Don't Have Enough Money");
+	 
+	   } else {
+	    leftEyeBrow = true;
+	 
+	    money = money - 5000;
+	    
+	    document.getElementById("leftEyebrowPrice")
+	    .innerHTML = "Bought"
+	  
+	  document.getElementById("lennyFace")
+	    .innerHTML = "( ͡"
+	  }
+	}
+
+
+	//left eye function
+
+	function leftEyeFunction() {
+	  
+	  if (leftEye == true) {
+	    alert("You Allready Bought Lenny's Left Eye");
+  
+	   } else if (money < 10000) {
+	    alert("You Don't Have Enough Money");
+ 
+	   } else {
+	    leftEye = true;
+ 
+	    money = money - 10000;
+    
+	    document.getElementById("leftEyePrice")
+	    .innerHTML = "Bought"
+ 
+	    document.getElementById("lennyFace")
+	    .innerHTML = "( ͡°"
+	 }
+	}
+
+	//mouth function
+
+	function mouthFunction() {
+  
+	  if (mouth == true) {
+	    alert("You Allready Bought Lenny's Mouth");
+	  
+	   } else if (money < 50000) {
+	    alert("You Don't Have Enough Money");
+ 
+	   } else {
+	    mouth = true;
+ 
+	    money = money - 50000;
+    
+	    document.getElementById("mouthPrice")
+	    .innerHTML = "Bought"
+ 
+	    document.getElementById("lennyFace")
+	    .innerHTML = "( ͡° ͜"
+	  }
+	}
+
+
+	//nose function
+
+	function noseFunction() {
+	  
+	  if (nose == true) {
+	    alert("You Allready Bought Lenny's Nose");
+  
+	   } else if (money < 100000) {
+	    alert("You Don't Have Enough Money");
+ 
+	   } else {
+	    nose = true;
+ 
+	    money = money - 100000;
+    
+	    document.getElementById("nosePrice")
+	    .innerHTML = "Bought"
+	 
+	    document.getElementById("lennyFace")
+	    .innerHTML = "( ͡° ͜ʖ"
+	  }
+	}
+
+
+	//right eye brow function
+
+	function rightEyeBrowFunction() {
+  
+	  if (rightEyeBrow == true) {
+	    alert("You Allready Bought Lenny's Right Eyebrow");
+	  
+	   } else if (money < 250000) {
+	    alert("You Don't Have Enough Money");
+	 
+	   } else {
+	    rightEyeBrow = true;
+	 
+	    money = money - 250000;
+	    
+	    document.getElementById("rightEyebrowPrice")
+	    .innerHTML = "Bought"
+	 
+	    document.getElementById("lennyFace")
+	    .innerHTML = "( ͡° ͜ʖ ͡"
+	  }
+	}
+
+
+	//right eye function
+
+
+	function rightEyeFunction() {
+  
+	  if (rightEye == true) {
+	    alert("You Allready Bought Lenny's Right Eye");
+  
+	   } else if (money < 500000) {
+	    alert("You Don't Have Enough Money");
+ 
+	   } else {
+	    rightEye = true;
+	 
+	    money = money - 500000;
+    
+	    document.getElementById("rightEyePrice")
+	    .innerHTML = "Bought"
+  
+	    document.getElementById("lennyFace")
+	    .innerHTML = "( ͡° ͜ʖ ͡°"
+	  }
+	}
+
+
+	//right side of head function
+
+	function rightSideOfHeadFunction() {
+  
+	  if (rightSideOfHead == true) {
+	    alert("You Allready Bought Lenny's Right Side Of Head");
+	  
+	   } else if (money < 1000000) {
+	    alert("You Don't Have Enough Money");
+ 
+	   } else {
+	    rightSideOfHead = true;
+ 
+	    money = money - 1000000;
+    
+	    document.getElementById("rightHeadPrice")
+	    .innerHTML = "Bought"
+  
+	    document.getElementById("lennyFace")
+	    .innerHTML = "( ͡° ͜ʖ ͡°)"
+ 
+		alert("Congrats! You Have Won The Game! Thanks For Playing! Press F5 to restart the game!")
+ 		}
+	}
+
+
+	//intervals
+
+	window.setInterval(function() {
+ 
+	  worker();
+	  superWorker();
+	  megaWorker();
+	  superMegaWorker();
+    }, 1000);
+
+    //end
+</script>

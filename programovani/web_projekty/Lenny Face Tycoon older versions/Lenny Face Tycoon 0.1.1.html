@@ -1,0 +1,630 @@
+<!doctype html>
+<html>
+ <head><title>Lennny Face Tycoon</title></head> 
+ <body id="body"> 
+  <h1 class="heading">Lenny Face Tycoon</h1> 
+  <div class="main"> 
+   <strong id="strongExplainWork"><p id="explainWork" class="explainWork"></p></strong> 
+   <p class="lennyFaceExplain" id="lennyFaceExplain"></p> 
+   <h1 class="lennyFace" id="lennyFace"></h1> 
+   <p class="congrats" id="congrats"></p> 
+   <strong id="strong"><p id="welcome" class="welcome">Welcome to Lenny Face Tycoon!</p></strong> 
+   <div id="divStart" class="divStart"> 
+    <button onclick="start()" id="startButton" class="start">Start!</button> 
+   </div> 
+   <div class="moneyAndWorkDiv"> 
+    <h1 class="moneyText" id="moneyText">Money:</h1> 
+    <p id="money" class="money">0</p> 
+    <div id="workButtonDiv" class="workButtonDiv"> 
+     <button onclick="work()" id="workButton" class="workButton">Work!</button> 
+    </div> 
+   </div> 
+   <div class="workerDiv"> 
+    <h1 class="buyWorker" id="buyWorker">Buy worker: 100$</h1> 
+    <p class="workerProfitsExplain" id="workerProfitsExplain">1 worker = 10$/s</p> 
+    <p class="workers" id="workers">Workers:</p> 
+    <p class="workersNumber" id="workersNumber">0</p> 
+    <div class="buyWorkerDiv"> 
+     <button onclick="buyWorker()" class="buyWorkerButton" id="buyWorkerButton">Buy!</button> 
+    </div> 
+   </div> 
+   <div class="superWorkerDiv"> 
+    <h1 class="buySuperWorker" id="buySuperWorker">Buy super worker: 1000$</h1> 
+    <p class="superWorkerProfitsExplain" id="superWorkerProfitsExplain">1 super worker = 100$/s</p> 
+    <p class="superWorkers" id="superWorkers">Super workers:</p> 
+    <p class="superWorkersNumber" id="superWorkersNumber">0</p> 
+    <div class="buySuperWorkerDiv"> 
+     <button onclick="buySuperWorker()" class="buySuperWorkerButton" id="buySuperWorkerButton">Buy!</button> 
+    </div> 
+   </div> 
+   <h1 class="shop" id="shop">Shop</h1> 
+   <div class="shopDiv" id="shipDiv"> 
+    <p class="lennyLeftSideOfHeadBuy" id="lennyLeftSideOfHeadBuy">Buy Lenny's left side of head: 100$</p> 
+    <button onclick="leftHead()" class="buyButton" id="lennyLeftSideOfHeadBuyButton">Buy</button> 
+    <p class="lennyLeftEyeBrowBuy" id="lennyLeftEyeBrowBuy">Buy Lenny's left eye brow: 500$</p> 
+    <button onclick="leftBrow()" class="buyButton" id="lennyLeftEyeBrowBuyButton">Buy</button> 
+    <p class="lennyLeftEyeBuy" id="lennyLeftEyeBuy">Buy Lenny's left eye: 1,000$</p> 
+    <button onclick="leftEyeFunction()" class="buyButton" id="lennyLeftEyeBuyButton">Buy</button> 
+    <p class="lennyMouthBuy" id="lennyMouthBuy">Buy Lenny's mouth: 2,000$</p> 
+    <button onclick="mouthFunction()" class="buyButton" id="lennyMouthBuyButton">Buy</button> 
+    <p class="lennyNoseBuy" id="lennyNoseBuy">Buy Lenny's nose: 3,000</p> 
+    <button onclick="noseFunction()" class="buyButton" id="lennyNoseBuyButton">Buy</button> 
+    <p class="lennyRightEyeBrowBuy" id="lennyRightEyeBrowBuy">Buy Lenny's right eye brow: 4,000$</p> 
+    <button onclick="rightEyeBrowFunction()" class="buyButton" id="lennyRightEyeBrowBuyButton">Buy</button> 
+    <p class="lennyRightEyeBuy" id="lennyRightEyeBuy">Buy Lenny's right eye: 5,000$</p> 
+    <button onclick="rightEyeFunction()" class="buyButton" id="lennyRightEyeBuyButton">Buy</button> 
+    <p class="lennyRightSideOfHeadBuy" id="lennyRightSideOfHeadBuy">Buy Lenny's right side of head: 10,000$</p> 
+    <button onclick="rightSideOfHeadFunction()" class="buyButton" id="lennyRightSideOfHeadBuyButton">Buy</button> 
+   </div> 
+  </div> 
+ </body>
+</html>
+
+
+<style type="text/css">
+
+
+body {
+  background-color: grey;
+}
+
+.heading {
+  font-family: Comic Sans MS;
+  text-align: center;
+  font-size: 35px;
+  background-color: lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.welcome {
+  font-family: Comic Sans MS;
+  font-size: 60px;
+  padding-left: 40px;
+}
+
+.start {
+  font-family: Comic Sans MS;
+  font-size: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 0px solid ;
+  border-radius: 40px;
+  background-color: #0fff00;
+}
+
+.divStart {
+  font-family: Comic Sans MS;
+  padding-left: 1000px;
+  padding-bottom: 40px;
+}
+
+.main {
+  padding-bottom: 50px;
+  border: 5px solid;
+  border-radius: 50px;
+  background: linear-gradient(45deg, grey, lightGrey);
+}
+
+.lennyFace {
+  font-family: Comic Sans MS;
+  font-size: 100px;
+  text-align: center;
+}
+
+.explainWork {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+.lennyFaceExplain {
+  font-family: Comic Sans MS;
+  font-size: 30px;
+  padding-left: 40px;
+}
+
+.money {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 50px;
+}
+
+.moneyText {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 30px;
+}
+
+
+.workButton {
+  font-family: Comic Sans MS;
+  font-size: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 0px solid;
+  border-radius: 60px;
+  background-color: #007fff;
+}
+
+.workButtonDiv {
+  font-family: Comic Sans MS;
+  padding-left: 980px;
+  padding-bottom: 40px;
+}
+
+
+.buyWorker {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 30px;
+}
+
+.buyWorkerButton {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  border: 0px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.workerProfitsExplain {
+  font-family: Comic Sans MS;
+  font-size: 30px;
+  padding-left: 40px;
+}
+
+
+.workers {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+.workersNumber {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+.buySuperWorker {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 30px;
+}
+
+.buySuperWorkerButton {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  border: 0px solid;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.superWorkerProfitsExplain {
+  font-family: Comic Sans MS;
+  font-size: 30px;
+  padding: 40px;
+}
+
+.superWorkers {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+.superWorkersNumber {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+.moneyAndWorkDiv {
+  font-family: Comic Sans MS;
+  border: 1px solid black;
+  background: linear-gradient(45deg, grey, lightGrey);
+}
+
+.workerDiv {
+  font-family: Comic Sans MS;
+  border: 1px solid black;
+  background: linear-gradient(45deg, grey, lightGrey);
+}
+
+.buyWorkerDiv {
+  font-family: Comic Sans MS;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.superWorkerDiv {
+  font-family: Comic Sans MS;
+  border: 1px solid black;
+  background: linear-gradient(45deg, grey, lightGrey);
+}
+
+.buySuperWorkerDiv {
+  font-family: Comic Sans MS;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.shop {
+  font-family: Comic Sans MS;
+  font-size: 50px;
+  padding-left: 20px;
+}
+
+.shopDiv {
+  font-family: Comic Sans MS;
+  font-size: 35px;
+}
+
+.congrats {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+.buyButton {
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  padding: 10px;
+  border: 0px solid;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+
+</style>
+
+
+<script type="text/javascript">
+
+
+//money vars
+
+var money = 0
+
+
+//work vars
+
+var workProfits = 1;
+
+
+//worker vars
+
+var numberOfWorkers = 0;
+var workerProfits = 10;
+var workerPrice = 100;
+
+
+//super worker vars
+
+var numberOfSuperWorkers = 0;
+var superWorkerProfits = 100;
+var superWorkerPrice = 1000;
+
+
+//lenny face part vars
+
+var leftSideOfHead = false;
+var leftEyeBrow = false;
+var leftEye = false;
+var mouth = false;
+var nose = false;
+var rightEyeBrow = false;
+var rightEye = false;
+var rightSideOfHead = false;
+
+
+//start function
+
+function start() {
+  
+  var divStart = document.getElementById("divStart");
+  var button = document.getElementById("startButton");
+  divStart.removeChild(startButton);
+  
+  var strong = document.getElementById("strong");
+  var welcome = document.getElementById("welcome");
+  strong.removeChild(welcome);
+  
+  var paragraph = document.getElementById("explainWork")
+  .innerHTML = "Click the Work button to make money!"
+}
+
+
+//work function
+
+function work() {
+  
+  money = money + workProfits
+  
+  document.getElementById("money")
+  .innerHTML = money;
+  
+  document.getElementById("explainWork")
+  .innerHTML = "Lenny face:"
+  
+}
+
+
+//worker function
+
+function worker() {
+  
+  money = money + workerProfits * numberOfWorkers
+  
+  document.getElementById("money")
+  .innerHTML = money;
+  
+}
+
+
+//worker buy function
+
+function buyWorker() {
+  
+  if (money < workerPrice) {
+    alert("You don't have enough money")
+  } else {
+    money = money - workerPrice;
+    numberOfWorkers = numberOfWorkers + 1;
+    
+    document.getElementById("workersNumber")
+    .innerHTML = numberOfWorkers;
+    
+    workerPrice = workerPrice * 2;
+    
+    document.getElementById("buyWorker")
+    .innerHTML = "Buy worker: " + workerPrice + "$"
+  }
+  
+}
+
+//super worker function
+
+function superWorker() {
+  
+  money = money + superWorkerProfits * numberOfSuperWorkers
+}
+
+
+//super worker buy function
+
+function buySuperWorker() {
+  
+  if (money < superWorkerPrice) {
+    alert("You don't have enough money!")
+  } else {
+  money = money - superWorkerPrice;
+  numberOfSuperWorkers = numberOfSuperWorkers + 1;
+  
+  document.getElementById("superWorkersNumber")
+  .innerHTML = numberOfSuperWorkers;
+
+  superWorkerPrice = superWorkerPrice * 2;
+  
+  document.getElementById("buySuperWorker")
+  .innerHTML = "Buy super worker: " + superWorkerPrice + "$"
+
+  }
+}
+
+
+//left side of head function
+
+function leftHead() {
+  
+  if (leftSideOfHead == true) {
+    alert("You allready bought Lenny's left side of head");
+  
+   } else if (money < 100) {
+    alert("You don't have enough money");
+ 
+   } else {
+    leftSideOfHead = true;
+ 
+    money = money - 100;
+    
+    document.getElementById("lennyLeftSideOfHeadBuy")
+    .innerHTML = "Lenny's left side of head: Bought";
+  
+    document.getElementById("lennyFaceExplain")
+    .innerHTML = ""
+    
+    document.getElementById("lennyFace")
+    .innerHTML = "("
+  }
+}
+
+//left eye brow function
+
+function leftBrow() {
+  
+  if (leftEyeBrow == true) {
+    alert("You allready bought Lenny's left eye brow");
+  
+   } else if (money < 500) {
+    alert("You don't have enough money");
+ 
+   } else {
+    leftEyeBrow = true;
+ 
+    money = money - 500;
+    
+    document.getElementById("lennyLeftEyeBrowBuy")
+    .innerHTML = "Lenny's left eye brow: Bought"
+  
+  document.getElementById("lennyFace")
+    .innerHTML = "( ͡"
+  }
+}
+
+
+//left eye function
+
+function leftEyeFunction() {
+  
+  if (leftEye == true) {
+    alert("You allready bought Lenny's left eye");
+  
+   } else if (money < 1000) {
+    alert("You don't have enough money");
+ 
+   } else {
+    leftEye = true;
+ 
+    money = money - 1000;
+    
+    document.getElementById("lennyLeftEyeBuy")
+    .innerHTML = "Lenny's left eye: Bought"
+ 
+    document.getElementById("lennyFace")
+    .innerHTML = "( ͡°"
+ }
+}
+
+//mouth function
+
+function mouthFunction() {
+  
+  if (mouth == true) {
+    alert("You allready bought Lenny's mouth");
+  
+   } else if (money < 2000) {
+    alert("You don't have enough money");
+ 
+   } else {
+    mouth = true;
+ 
+    money = money - 2000;
+    
+    document.getElementById("lennyMouthBuy")
+    .innerHTML = "Lenny's mouth: Bought"
+ 
+    document.getElementById("lennyFace")
+    .innerHTML = "( ͡° ͜"
+  }
+}
+
+
+//nose function
+
+function noseFunction() {
+  
+  if (nose == true) {
+    alert("You allready bought Lenny's nose");
+  
+   } else if (money < 3000) {
+    alert("You don't have enough money");
+ 
+   } else {
+    nose = true;
+ 
+    money = money - 3000;
+    
+    document.getElementById("lennyNoseBuy")
+    .innerHTML = "Lenny's nose: Bought"
+ 
+    document.getElementById("lennyFace")
+    .innerHTML = "( ͡° ͜ʖ"
+  }
+}
+
+
+//right eye brow function
+
+function rightEyeBrowFunction() {
+  
+  if (rightEyeBrow == true) {
+    alert("You allready bought Lenny's right eye brow");
+  
+   } else if (money < 4000) {
+    alert("You don't have enough money");
+ 
+   } else {
+    rightEyeBrow = true;
+ 
+    money = money - 4000;
+    
+    document.getElementById("lennyRightEyeBrowBuy")
+    .innerHTML = "Lenny's right eye brow: Bought"
+ 
+    document.getElementById("lennyFace")
+    .innerHTML = "( ͡° ͜ʖ ͡"
+  }
+}
+
+
+//right eye function
+
+
+function rightEyeFunction() {
+  
+  if (rightEye == true) {
+    alert("You allready bought Lenny's right eye");
+  
+   } else if (money < 5000) {
+    alert("You don't have enough money");
+ 
+   } else {
+    rightEye = true;
+ 
+    money = money - 5000;
+    
+    document.getElementById("lennyRightEyeBuy")
+    .innerHTML = "Lenny's right eye: Bought"
+  
+    document.getElementById("lennyFace")
+    .innerHTML = "( ͡° ͜ʖ ͡°"
+  }
+}
+
+
+//right side of head function
+
+function rightSideOfHeadFunction() {
+  
+  if (rightSideOfHead == true) {
+    alert("You allready bought Lenny's right side of head");
+  
+   } else if (money < 10000) {
+    alert("You don't have enough money");
+ 
+   } else {
+    rightSideOfHead = true;
+ 
+    money = money - 10000;
+    
+    document.getElementById("lennyRightSideOfHeadBuy")
+    .innerHTML = "Lenny's right side of head: Bought"
+  
+    document.getElementById("lennyFace")
+    .innerHTML = "( ͡° ͜ʖ ͡°)"
+ 
+    alert("Congrats! You have won the game! Thanks for playing!")
+  }
+}
+
+
+//intervals
+
+window.setInterval(function() {
+ 
+  worker();
+  superWorker();
+  
+  }, 1000);
+
+
+
+
+
+
+</script>
